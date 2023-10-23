@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        /* Reset some default browser styles */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .hero {
+            background-image: url('/static/images/image.jpg');
+            background-size: cover;
+            text-align: center;
+            color: #fff;
+            padding: 4rem 0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .feature {
+            flex: 1;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .feature h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contacts' %}">Contacts</a></li>
+                <li><a href="{% url 'blog' %}">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Our Website</h1>
+        <p>Your source for all things amazing.</p>
+        <a href="{% url 'about' %}" class="btn">Learn More</a>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h2>Quality Content</h2>
+            <p>We provide high-quality content to meet your needs.</p>
+        </div>
+        <div class="feature">
+            <h2>Responsive Design</h2>
+            <p>Our website is optimized for all devices.</p>
+        </div>
+        <div class="feature">
+            <h2>24/7 Support</h2>
+            <p>We are here to assist you at any time.</p>
+        </div>
+    </section>
+</body>
+</html>
